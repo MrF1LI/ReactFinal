@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
 import Home from './pages/Home';
 import Categories from './pages/Categories';
 import MealDetails from './pages/MealDetails';
@@ -15,6 +15,9 @@ const App = () => {
                 <Route path="/meal/:id" element={<MealDetails />} />
                 <Route path="/categories" element={<Categories />} />
                 <Route path="/settings" element={<Settings />} />
+
+                {/* Catch-all fallback route */}
+                <Route path="*" element={<Navigate to="/" />} />
             </Routes>
         </AnimatePresence>
     );
