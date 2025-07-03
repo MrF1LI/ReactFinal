@@ -10,7 +10,7 @@ import { LanguageProvider } from './context/LanguageContext';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-      <BrowserRouter>
+      <BrowserRouter basename="/ReactFinal">
           <ThemeProvider>
               <LanguageProvider>
                   <App />
